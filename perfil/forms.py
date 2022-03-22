@@ -10,7 +10,7 @@ class MovieForm(forms.Form):
 
 class SearchMovie(forms.Form):
     title = forms.CharField(max_length=35)
-    director = forms.CharField(max_length=30)
+
     
 
 class SerieForm(forms.Form):
@@ -23,7 +23,7 @@ class SerieForm(forms.Form):
     
 class SearchSerie(forms.Form):
     title = forms.CharField(max_length=35)
-    director = forms.CharField(max_length=30)
+
     
 
 class SongForm(forms.Form):
@@ -35,4 +35,3 @@ class SongForm(forms.Form):
     
 class SearchSong(forms.Form):
     title = forms.CharField(max_length=35)
-    artist = forms.CharField(max_length=30)
