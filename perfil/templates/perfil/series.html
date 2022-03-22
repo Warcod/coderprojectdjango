@@ -1,0 +1,22 @@
+{% extends 'perfil/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<a href="{% url 'searchSerie' %}" >Buscar una serie</a>
+
+<div id='options'>
+
+    <h1>Estas son las series recomendadas por la comunidad</h1>
+
+    <ul>
+        {% for s in series %}
+        <li> Título: {{s.title}} | Director: {{s.director}} </li>            
+        {% endfor %}
+    </ul>
+
+</div>
+
+<a href="{% url 'formSerie' %}" >Agregar una serie</a>
+{% endblock  %}

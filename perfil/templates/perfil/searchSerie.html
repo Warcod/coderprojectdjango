@@ -1,0 +1,25 @@
+{% extends 'perfil/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %} 
+
+    <form action="" method="GET"> {% csrf_token %}
+            
+        <table>
+            {{ myForm.as_table }}
+        </table>
+
+        <input type="submit" value="Buscar">
+
+    </form>
+    {% for s in series  %}
+    <ul>
+        <li>Título: {{s.title}} | Director: {{s.director}}</li>
+    </ul>
+    {% endfor %}
+
+    <a href="{% url 'series' %}" >Ver todas las series</a>
+ 
+
+{% endblock %}

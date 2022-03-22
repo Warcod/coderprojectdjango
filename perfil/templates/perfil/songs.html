@@ -1,0 +1,23 @@
+{% extends 'perfil/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <a href="{% url 'searchSong' %}" >Buscar una canción</a>
+
+    <div id='options'>
+
+        <h1>Estas son las canciones recomendadas por la comunidad</h1>
+
+        <ul>
+            {% for s in songs %}
+            <li> Título: {{s.title}} | Artista: {{s.artist}} </li>            
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <a href="{% url 'formSong' %}" >Agregar una canción</a>
+
+{% endblock  %}

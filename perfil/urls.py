@@ -19,6 +19,15 @@ from django.urls import path
 from perfil import views
 
 urlpatterns = [
-    path('', views.inicio)
+    path('movies/', views.movies, name='movies'),
+    path('songs/', views.songs, name='songs'),
+    path('series/', views.series, name='series'),
+    path('form-movie/', views.formMovie, name='formMovie'),
+    path('search-movie/', views.searchMovies, name='searchMovie'),
+    path('form-serie/', views.formSeries , name='formSerie'),
+    path('search-serie/', views.searchSeries, name='searchSerie'),
+        path('form-song/', views.formSongs , name='formSong'),
+    path('search-song/', views.searchSongs, name='searchSong')
+    
 ]
 

@@ -1,0 +1,23 @@
+{% extends 'perfil/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <a href="{% url 'searchMovie' %}" >Buscar una película</a>
+
+    <div id='options'>
+
+        <h1>Estas son las peliculas recomendadas por la comunidad</h1>
+
+        <ul>
+            {% for m in movies %}
+            <li> Título: {{m.title}} | Director: {{m.director}} </li>            
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <a href="{% url 'formMovie' %}" >Agregar una película</a>
+
+{% endblock  %}
